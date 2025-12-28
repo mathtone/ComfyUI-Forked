@@ -5,8 +5,6 @@ VisualStudioVersion = 18.0.11222.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ComfyUI", "ComfyUI.pyproj", "{52C006E6-2606-418C-9C09-3C9547F5D5E0}"
 EndProject
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "ComfyFrontEnd", "..\ComfyUI_frontend\ComfyFrontEnd.esproj", "{999C18D5-A93F-5AED-AC4A-2900B3B2E40B}"
-EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ComfyUI-Align", "..\node_repos\ComfyUI-Align\ComfyUI-Align.pyproj", "{11BCD3AF-EDDC-4F89-9944-C57610EDC7A2}"
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ComfyUI-Easy-Use", "..\node_repos\ComfyUI-Easy-Use\ComfyUI-Easy-Use.pyproj", "{BB596394-8C02-44A6-B160-87A1786583EC}"
@@ -14,6 +12,12 @@ EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ComfyUI-Interactive", "..\node_repos\ComfyUI-Interactive\ComfyUI-Interactive.pyproj", "{AC5E7566-F1BB-4437-B4BF-D213C76F713C}"
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "rgthree-comfy", "..\node_repos\rgthree-comfy\rgthree-comfy.pyproj", "{C517A426-131F-4555-B0A3-159379F2B151}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nodes", "Nodes", "{07605E80-17BF-4CFE-907D-B6A901896734}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "ComfyFrontEnd", "..\comfy-ui-frontend-fork\ComfyFrontEnd.esproj", "{40998E28-224C-6B12-4C9F-08762EADC20A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox.Tests", "..\Sandbox.Tests\Sandbox.Tests.csproj", "{B30355B3-4B45-4A0E-ADF3-E71903A58B72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +27,6 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{52C006E6-2606-418C-9C09-3C9547F5D5E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{52C006E6-2606-418C-9C09-3C9547F5D5E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{999C18D5-A93F-5AED-AC4A-2900B3B2E40B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{999C18D5-A93F-5AED-AC4A-2900B3B2E40B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{999C18D5-A93F-5AED-AC4A-2900B3B2E40B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{999C18D5-A93F-5AED-AC4A-2900B3B2E40B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{999C18D5-A93F-5AED-AC4A-2900B3B2E40B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{999C18D5-A93F-5AED-AC4A-2900B3B2E40B}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{11BCD3AF-EDDC-4F89-9944-C57610EDC7A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{11BCD3AF-EDDC-4F89-9944-C57610EDC7A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB596394-8C02-44A6-B160-87A1786583EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -37,9 +35,25 @@ Global
 		{AC5E7566-F1BB-4437-B4BF-D213C76F713C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C517A426-131F-4555-B0A3-159379F2B151}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C517A426-131F-4555-B0A3-159379F2B151}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40998E28-224C-6B12-4C9F-08762EADC20A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40998E28-224C-6B12-4C9F-08762EADC20A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40998E28-224C-6B12-4C9F-08762EADC20A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{40998E28-224C-6B12-4C9F-08762EADC20A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40998E28-224C-6B12-4C9F-08762EADC20A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40998E28-224C-6B12-4C9F-08762EADC20A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B30355B3-4B45-4A0E-ADF3-E71903A58B72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B30355B3-4B45-4A0E-ADF3-E71903A58B72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B30355B3-4B45-4A0E-ADF3-E71903A58B72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B30355B3-4B45-4A0E-ADF3-E71903A58B72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{11BCD3AF-EDDC-4F89-9944-C57610EDC7A2} = {07605E80-17BF-4CFE-907D-B6A901896734}
+		{BB596394-8C02-44A6-B160-87A1786583EC} = {07605E80-17BF-4CFE-907D-B6A901896734}
+		{AC5E7566-F1BB-4437-B4BF-D213C76F713C} = {07605E80-17BF-4CFE-907D-B6A901896734}
+		{C517A426-131F-4555-B0A3-159379F2B151} = {07605E80-17BF-4CFE-907D-B6A901896734}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {91E58413-2D18-4C71-B64F-16A95BA52CFF}
